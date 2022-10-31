@@ -15,7 +15,7 @@ export default function CouponDetail() {
 
   const onUse = () => {
     if (!store || !coupon) return;
-    //couponStorage.setUserUsedCoupon(coupon?.id);
+    couponStorage.setUserUsedCoupon(coupon?.id);
     registerStat(store.id, coupon.id);
     router.push("/used/" + coupon.id);
   };
