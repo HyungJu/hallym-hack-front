@@ -17,7 +17,7 @@ export const CouponList: React.FC<CouponListProps> = (props) => {
     <div style={{ marginBottom: "20px" }}>
       {coupons.map((coupon) => {
         if (hook.checkUserUsedCoupon(coupon.id)) return null;
-        return <CouponElement coupon={coupon} />;
+        return <CouponElement coupon={coupon} key={coupon.id} />;
       })}
     </div>
   );
